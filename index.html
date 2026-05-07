@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIVOR — Luxury Tour Company</title>
+  <meta name="description" content="Bespoke luxury travel crafted around your passions, pace, and sense of discovery." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Proza+Libre:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: 'Cormorant Garamond', Georgia, serif;
+      --secondary: 'Proza Libre', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: #1a1a1a;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 24px 44px;
+      overflow: hidden;
+    }
+
+    /* Hero background */
+    .bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('cec85d7c134d3427653e49671f16155001b7369e.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.38) 0%,
+        rgba(0,0,0,0.30) 40%,
+        rgba(0,0,0,0.60) 100%
+      );
+    }
+
+    /* All content sits above the overlay */
+    .top, .middle, .bottom { position: relative; z-index: 1; }
+
+    /* ── Logo ── */
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 18px;
+      width: auto;
+    }
+
+    /* ── Centre ── */
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: var(--secondary);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .headline {
+      font-family: var(--primary);
+      font-weight: 400;
+      font-size: clamp(28px, 5vw, 52px);
+      line-height: 1.1;
+      color: #fff;
+      max-width: 560px;
+    }
+
+    .subline {
+      font-family: var(--secondary);
+      font-size: clamp(13px, 1.5vw, 16px);
+      line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      max-width: 400px;
+    }
+
+    /* ── Contact ── */
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-label {
+      font-family: var(--secondary);
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.40);
+    }
+
+    .contact-email {
+      font-family: var(--secondary);
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.30);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-email:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    @media (min-width: 640px) {
+      .page { padding: 52px 32px 56px; }
+      .logo { height: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="bg"></div>
+
+    <!-- Logo -->
+    <div class="top">
+      <img
+        class="logo"
+        src="T I V O R.png"
+        alt="TIVOR"
+      />
+    </div>
+
+    <!-- Centre -->
+    <div class="middle">
+      <p class="eyebrow">An Extraordinary Journey Awaits</p>
+      <h1 class="headline">Extraordinary Journeys,<br>Tailored for You</h1>
+      <p class="subline">Bespoke luxury travel crafted around your passions, pace, and sense of discovery.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="bottom">
+      <p class="contact-label">For enquiries</p>
+      <a class="contact-email" href="mailto:travel@tivor.ae">hello@tivortours.com</a>
+    </div>
+
+  </div>
+</body>
+</html>
